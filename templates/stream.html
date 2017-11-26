@@ -1,16 +1,48 @@
 {% extends 'layout.html' %}
 {% block content %}
+<script type="text/javascript"> var i = 1;</script>
 {% for post in stream %}
-   <article>
-     <h2>
-        <a href="{{ url_for('stream', username=post.user.username) }}">{{ post.user.username }}</a>
-      </h2>
-     <i class="clock"></i><time data-time="{{ post.timestamp }}" class="distime" datetime="{{ 
-post.timestamp.strftime('%Y-%m-%d %H:%M:S') }}">{{ post.timestamp.strftime('%Y-%m-%d %H:%M:S') }}</time>
-   <a href="{{ url_for('view_post', post_id=post.id)}}" class="view">View</a>
-             <div class="post">
-               {{ post.content }}
-             </div>
-     </article>
+
+<article>
+  <div id="dimg"><img id="#" class="{{ post.id }}" src="#" style="width:38px;border-radius: 60%"></div>
+  <h2>
+    <p><a href="{{ url_for('stream', username=post.user.username) }}">{{ post.user.username }}</a></p>
+  </h2>
+  <i class="clock"></i><time data-time="{{ post.timestamp }}" class="distime" datetime="{{ 
+  post.timestamp.strftime('%Y-%m-%d %H:%M:S') }}">{{ post.timestamp }}</time>
+
+  <div class="post">
+   {{ post.content }} <span style="display:inline-block; width: 10px;"></span>
+    <a href="{{ url_for('view_post', post_id=post.id)}}" class="view"><button  class="myButton" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="background: #6ECDF7;
+    color: #fff;/* Green */
+    border: none;
+    color: white;
+    height: 30px;
+    width:52px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 30px;
+    font-size: 10px;">View</button></a>
+  </div>
+ </article>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+    function bigImg(x) {
+        x.style.height = "30px";
+        x.style.width = "74px";
+    }
+
+    function normalImg(x) {
+        x.style.height = "30px";
+        x.style.width = "52px";
+    }
+    // add random images
+    src = '/static/img/avatar'+ Math.floor((Math.random() * 9) + 1) +'.PNG'; 
+    $(".{{ post.id }}").attr("src",src);
+
+
+</script>
+
 {% endfor %}
 {% endblock %}
