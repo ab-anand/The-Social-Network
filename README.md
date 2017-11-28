@@ -9,3 +9,6 @@ It uses Flask, Peewee and Jinja2 templating.
 - [x] Follow/unfollow someone
 - [x] Can view a particular post
 - [x] Get a random avatar
+
+## Further Modifications planned
+- [ ] 
