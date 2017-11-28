@@ -11,4 +11,5 @@ It uses Flask, Peewee and Jinja2 templating.
 - [x] Get a random avatar
 
 ## Further Modifications planned
-- [ ] 
+- [ ] Uploading their own avatar.
+- [ ] Blocking a user
