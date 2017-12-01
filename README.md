@@ -13,3 +13,4 @@ It uses Flask, Peewee and Jinja2 templating.
 ## Further Modifications planned
 - [ ] Uploading their own avatar.
 - [ ] Blocking a user
+- [ ] See first
