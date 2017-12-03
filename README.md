@@ -1,4 +1,7 @@
 # The-Social-Network
+
+![](screenshot.png)
+
 This website is a mini Social Network implementation in Flask. Very similar to twitter in earlier days.
 It uses Flask, Peewee and Jinja2 templating.
 
@@ -14,3 +17,4 @@ It uses Flask, Peewee and Jinja2 templating.
 - [ ] Uploading their own avatar.
 - [ ] Blocking a user
 - [ ] See first
+- [ ] Delete a post
