@@ -18,3 +18,5 @@ It uses Flask, Peewee and Jinja2 templating.
 - [ ] Blocking a user
 - [ ] See first
 - [ ] Delete a post
+
+### Credits - Teamtreehouse
